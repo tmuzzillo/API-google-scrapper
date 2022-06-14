@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="main">
+        <img id="logo" src="img\logo.png">
+        <input id="searchInput" type="text">
+        <button onclick="search()">Google Search</button>
+        <button>I'm feeling lucky</button>
+    </div>
+
+<script>
+    //creamos una funcion que toma el texto buscado en el input y lo pasa como parametro en el query 
+    //luego nos redirige al resultado de esa query
+    function search(){
+        let textSearch = document.getElementById('searchInput').value
+        document.location.href = 'results.html?query=' + textSearch;
+    }
+</script>
+</body>
+</html>
